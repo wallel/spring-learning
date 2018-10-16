@@ -13,5 +13,11 @@
         * ServerAuthenticationEntryPoint ->handle when need authentication
         * ServerAccessDeniedHandler->handle when authenticate error
     
-*  see "/api/test/login", an example of login handler      
+*  see "/api/test/login", an example of login handler
+
+* add a new WebExceptionHandler with Order(-2) to handle exceptions  your self
+    
+    * auto config WebExceptionHandler    
+        1. order=-1, DefaultErrorWebExceptionHandler
+        2. order=0,  WebFluxResponseStatusExceptionHandler
 
