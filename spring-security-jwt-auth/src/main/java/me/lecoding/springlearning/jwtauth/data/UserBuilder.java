@@ -1,6 +1,10 @@
 package me.lecoding.springlearning.jwtauth.data;
 
+import me.lecoding.springlearning.jwtauth.auth.Role;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserBuilder {
     private String id;
@@ -10,6 +14,7 @@ public class UserBuilder {
     private String password;
     private String email;
     private String mobile;
+    private List<Role> roles = new ArrayList<>();
 
     public UserBuilder id(String id) {
         this.id = id;
@@ -46,7 +51,12 @@ public class UserBuilder {
         return this;
     }
 
+    public UserBuilder roles(List<Role> roles) {
+        this.roles = roles;
+        return this;
+    }
+
     public User build() {
-        return new User(id, nickName, sex, birthDay, password, email, mobile);
+        return new User(id, nickName, sex, birthDay, password, email, mobile,roles);
     }
 }

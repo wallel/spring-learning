@@ -18,7 +18,7 @@ import spock.mock.DetachedMockFactory
 
 @SpringBootTest(properties = "spring.main.web-application-type=reactive")
 @Stepwise
-class LoginSpec extends Specification{
+class LoginIntegrationSpec extends Specification{
     @Autowired
     ReactiveUserDetailsService authUserDetailsService
     @Autowired

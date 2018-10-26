@@ -25,7 +25,7 @@ public class User {
     public User(){
     }
 
-    public User(String id,String nickName, String sex, Date birthDay, String password, String email, String mobile) {
+    public User(String id,String nickName, String sex, Date birthDay, String password, String email, String mobile,List<Role> roles) {
         this.id = id;
 
         this.nickName = nickName;
@@ -34,7 +34,7 @@ public class User {
         this.password = password;
         this.email = email;
         this.mobile = mobile;
-
+        this.roles = roles;
     }
 
     public String getId() {
